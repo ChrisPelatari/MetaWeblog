@@ -358,8 +358,8 @@ namespace WilderMinds.MetaWeblog
       }
       catch (Exception ex)
       {
-        _logger.LogCritical($"Failed to Parse Array: {type}");
-        throw ex;
+        _logger.LogCritical($"Failed to Parse Array: {type}, Exception: {ex.Message}");
+        throw;
       }
     }
   }
